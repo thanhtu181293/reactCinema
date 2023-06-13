@@ -6,7 +6,7 @@ export const getFilmLists = () => {
         axios (
             {
                 method: 'GET',
-                url: 'https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP04',
+                url: 'http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP04',
             }
         ).then(res => {
             dispatch({

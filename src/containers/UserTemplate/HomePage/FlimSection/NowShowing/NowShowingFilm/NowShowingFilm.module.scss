@@ -1,8 +1,8 @@
 .film {
-    height: 380px;
-    max-width: 100%;
+    height: 320px;
+    max-width: 210px;
     margin: 0 auto;
-    padding: 15px 20px;
+    padding: 15px 5px 0;
     position: relative;
     outline: none;
     :global .film__hot {
@@ -18,8 +18,6 @@
     }
     :global .filmDetail {
         position: relative;
-        background-repeat: no-repeat;
-        background-size: cover;
         display: block;
         width: 100%;
         height: 100%;
@@ -116,7 +114,7 @@
           border-radius: 4px;
         }
         .filmTitle {
-          font-size: 18px;
+          font-size: 14px;
           font-family: 'SF Medium';
         }
       }

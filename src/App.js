@@ -1,23 +1,23 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import  './assets/style/main.scss';
-import HomeTemplate from './template/HomeTemplate';
+import UserTemplate from './template/UserTemplate';
 import AdminTemplate from './template/AdminTemplate';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { routeHome, routeAdmin } from './routes/menu-routes';
+import { routeUser, routeAdmin } from './routes/menu-routes';
 import PageNotFound from './containers/PageNotFound';
 
 /**
- * Show home route
+ * Show user route
  * @param {*} routes 
  */
-const showHomeLayout = (routes) => {
+const showUserLayout = (routes) => {
     
   if (routes && routes.length > 0) {
     return routes.map ((item, index) => {
       return (
-        <HomeTemplate key = {index} exact = {item.exact} path = {item.path} Component = {item.component}></HomeTemplate>
+        <UserTemplate key = {index} exact = {item.exact} path = {item.path} Component = {item.component}></UserTemplate>
       )
     })
   }
@@ -41,7 +41,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        {showHomeLayout(routeHome)}
+        {showUserLayout(routeUser)}
         {showAdminLayout(routeAdmin)}
         <Route path = "" component = {PageNotFound}/>
       </Switch>

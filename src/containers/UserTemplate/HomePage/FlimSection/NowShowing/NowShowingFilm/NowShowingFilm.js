@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import style from './NowShowingFilm.module.scss';
 import { connect } from 'react-redux';
-import {NavLink} from "react-router-dom"; 
 
 class Film extends Component {
     constructor(props) {
@@ -33,8 +32,7 @@ class Film extends Component {
     }
 
     render() {
-        console.log(this.props.dataProvider);
-        let {title, infoFilm, imgUrl, point, starNumber, hotFilm, ageType, maPhim} = this.props.dataProvider;
+        let {title, infoFilm, imgUrl, point, starNumber, hotFilm, ageType} = this.props.dataProvider;
         return (
             <div className = {style.film}>
               {hotFilm ? (
@@ -43,7 +41,7 @@ class Film extends Component {
                   </div>
                   ): ''
               }
-              <NavLink to={`/phim/${maPhim}`} className ="filmDetail" style = {{backgroundImage: `url(${imgUrl})`}} >
+              <a className ="filmDetail" href="" style = {{backgroundImage: `url(${imgUrl})`}}>
                   <div className = "filmThumbnail" >
                         <span className = "film__avgPoint">
                           <p className = "avgpoint m-0">
@@ -64,14 +62,17 @@ class Film extends Component {
                             </span>
                         </button>
                   </div>
-              </NavLink>
+              </a>
               <div className = "fimInfo">
                   <div className="nameFilm--noHover">
                         <span className = "ageType">{ageType}</span>
                         <span className = "filmTitle ml-2">{title}</span>
                   </div>
+                  <div className="infoFim">
+                        <span className = "time d-block">{infoFilm}</span>
+                  </div>
                   <div className="nameFilm--hover">
-                    <NavLink to={`/phim/${maPhim}`} className = "buyNow">MUA VÉ</NavLink>
+                    <a href="" className = "buyNow">MUA VÉ</a>
                   </div>
               </div>
             </div>

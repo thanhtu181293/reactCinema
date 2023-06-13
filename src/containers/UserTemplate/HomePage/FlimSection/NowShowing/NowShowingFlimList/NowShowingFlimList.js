@@ -9,13 +9,96 @@ import { getFilmLists } from '../../../../../../redux/actions/FilmSectionReducer
 class NowShowingFlimList extends Component {
     constructor(props) {
         super(props);
-    
+        this.state = {
+            filmList : [
+                {
+                    title: 'Mãi Bên Em - Endless - (C13)',
+                    infoFilm: '100 phút',
+                    imgUrl: '/./images/films/mai-ben-em-endless.png',ageType: 'C13',
+                    point: 7.5,
+                    starNumber: 3.5,
+                    hotFilm: true,
+                    trailerUrl: 'https://www.youtube.com/embed/50aEACmN5iI'
+                },
+                {
+                    title: 'Cá Sấu Tử Thần - Water: Abyss - (C18)',
+                    infoFilm: '100 phút',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/wihfeV6sTfM'
+                },
+                {
+                    title: 'Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16) Captain America: Ci',
+                    infoFilm: '147 phút',
+                    imgUrl: '/./images/films/noi-chien-sieu-anh-hung.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/VdeuR-jUysg'
+                },
+                {
+                    title: '',
+                    infoFilm: '',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/Nn-8OqGdgrA'
+                },
+                {
+                    title: 'Nội Chiến Siêu Anh Hùng - Captain America: Civil War',
+                    infoFilm: '147 phút',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/Nn-8OqGdgrA'
+                },
+                {
+                    title: 'Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16) Captain America: Ci',
+                    infoFilm: '147 phút',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/Nn-8OqGdgrA'
+                },
+                {
+                    title: 'Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16) Captain America: Ci',
+                    infoFilm: '147 phút',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/Nn-8OqGdgrA'
+                },
+                {
+                    title: 'Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16) Captain America: Ci',
+                    infoFilm: '147 phút',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/Nn-8OqGdgrA'
+                },
+                {
+                    title: 'Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16) Captain America: Ci',
+                    infoFilm: '147 phút',
+                    imgUrl: '/./images/films/ca-sau-tu-than.png',
+                    ageType: 'C18',
+                    point: 8.2,
+                    starNumber: 5,
+                    trailerUrl: 'https://www.youtube.com/embed/Nn-8OqGdgrA'
+                },
+            ]
+        }
     }
 
     mapPropstoDataProvider = () => {
         let dataProvider = this.props.listFilm.map((item) => {
             return ({
-                maPhim: item.maPhim,
                 title: item.tenPhim,
                 infoFilm: '0 phút',
                 imgUrl: item.hinhAnh,
@@ -46,6 +129,7 @@ class NowShowingFlimList extends Component {
             speed: 500,
             slidesPerRow: 4,
             rows: 2,
+            className: "outline-none",
             responsive: [
                 {
                     breakpoint: 1070,
@@ -71,18 +155,16 @@ class NowShowingFlimList extends Component {
           <div className= {style.filmList}>
              <div className="container filmList-container">
                  <h2 className= "filmList__title">PHIM ĐANG CHIẾU</h2>
-                <Slider {...settings}
-                        ref = {slider => (this.slider1 = slider)}>
+                <Slider {...settings}>
                     {this.renderFilm()}
-                </Slider> 
+                </Slider>   
              </div>
           </div>
         )
     }
-
-    componentDidUpdate = () => {
-        this.slider1.slickGoTo(0, true);
-    }
+    // componentDidMount() {
+    //     this.props.dispatch(getFilmLists());
+    // }
 }
 
 const mapStatetoProps = (state) => {

@@ -17,6 +17,7 @@ class FimCommingSoonList extends Component {
     }
 
     componentDidMount() {
+        console.log('componentDidMount');
         this.setState({
           nav1: this.slider1,
           nav2: this.slider2
@@ -34,7 +35,6 @@ class FimCommingSoonList extends Component {
     mapPropstoDataProvider = () => {
         const dataProvider = this.props.listFilm.map(item =>{
             return ({
-                maPhim: item.maPhim,
                 type: '',
                 title : item.tenPhim,
                 imgUrl:  item.hinhAnh,
@@ -50,6 +50,7 @@ class FimCommingSoonList extends Component {
     }
     
     renderCommingSoonFilmSlider = (dataProvider) => {
+        console.log('renderCommingSoonFilmSlider start');
         return dataProvider.map((item, index) => {
             return (
                 <div key = {index}>
@@ -86,7 +87,7 @@ class FimCommingSoonList extends Component {
             slidesToShow: 5,
             slidesToScroll: 2,
             swipeToSlide: true,
-            draggable: false,
+            draggable: true,
             infinite: true,
             asNavFor: '.slider-for',
             responsive: [
@@ -110,20 +111,12 @@ class FimCommingSoonList extends Component {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                     }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        swipeToSlide: true,
-                        focusOnSelect: true
-                    }
                 }
             ]
         }
 
         const dataProvider = this.mapPropstoDataProvider();
+        console.log(dataProvider);
         return (
             <div className={`${style.fimCommingSoonList}`}>
                     <div>
