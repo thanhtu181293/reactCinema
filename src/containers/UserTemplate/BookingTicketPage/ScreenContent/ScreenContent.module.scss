@@ -1,0 +1,60 @@
+.screencContent {
+    padding: 10px 30px;
+    :global .screencContent_areas {
+        .screencContent__info {
+            display: flex;
+            margin-bottom: 20px;
+            .screencContent__logo {
+                width: 80px;
+                margin-right: 10px;
+            }
+            .screencContent__flim {
+                .flim-text {
+                    margin: 0;
+                    padding: 0;
+                    color: #9C9C9C;
+                    font-size: 18px;
+                    .cinena-name {
+                        color: #333;
+                    }
+                }
+                .hour-text {
+                    color: #9C9C9C;
+                    font-size: 16px;
+                }
+            }
+        }
+        .time-left {
+            .time-left--text {
+                color: #9C9C9C;
+            }
+            .time-left--hour {
+                font-weight: 600;
+                .inline {
+                    color: red;
+                }
+            }
+        }
+    }
+    :global .sreenImg {
+        img {
+            width: 100%;
+        }
+    }
+    :global .total {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .screencContent {
+        position: fixed;
+        background: #fff;
+        z-index: 10;
+        :global .total {
+            display: block;
+            color: #429321;
+            font-size: 1.5rem;
+        }
+    }
+}

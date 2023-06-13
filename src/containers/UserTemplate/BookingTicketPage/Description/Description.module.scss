@@ -1,0 +1,25 @@
+.description {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem 0;
+    :global .description__seat {
+        text-align: center;
+        p {
+            margin: 10px 0 0;
+        }
+    }
+}
+@media screen and (max-width: 950px) {
+    .description {
+        width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .description {
+        width: 100%;
+    }
+}

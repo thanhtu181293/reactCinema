@@ -5,6 +5,7 @@ import moment from 'moment';
 import 'moment/locale/vi';
 import * as Utils from '../../../../../../assets/utils/utils';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 class CommingSoonFilmSlider extends Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class CommingSoonFilmSlider extends Component {
     }
 
     render() {
-        let {type, title, description, starNumber, releaseDate, imgUrl} = this.props.dataProvider;
+        let {type, title, description, starNumber, releaseDate, imgUrl, maPhim} = this.props.dataProvider;
         moment.locale('vi');
         return (
             <div className={style.commingSoonSlider}>
@@ -28,7 +29,7 @@ class CommingSoonFilmSlider extends Component {
                     <div className="container h-100">
                         <h3>PHIM SẮP CHIẾU</h3>
                         <div className="row h-100 align-item-center">
-                            <div className="col-6 col-md-8 commingSoonSlider__area--left">
+                            <div className="col-12 col-sm-6 col-md-8 commingSoonSlider__area--left">
                                 <p className = "commingSoonSlider__area--type">{type}</p>
                                 <h4 className = "commingSoonSlider__area--title">{title}</h4>
                                 <div className = "commingSoonSlider__info">
@@ -42,20 +43,19 @@ class CommingSoonFilmSlider extends Component {
                                 </div>
                                 <p className= "commingSoonSlider__description">{description}</p>
                                 <p className = "commingSoonSlider__moreinfo">
-                                    <a href="">
+                                    <NavLink to={`/phim/${maPhim}`}>
                                         XEM THÊM
                                         <i className="fa fa-angle-right"></i>
-                                    </a>
+                                    </NavLink>
                                 </p>
                             </div>
-                            <div className="col-6 col-md-4 commingSoonSlider__area--right">
+                            <div className="col-12 col-sm-6 col-md-4 commingSoonSlider__area--right">
                                 <div className="commingSoonSlider__img">
-                                    <a href="" onClick = {this.playTrainer}
-                                      data-toggle="modal" data-target="#trainerModal" >
+                                    <NavLink to={`/phim/${maPhim}`}>
                                         <div className="overlay"></div>
                                         <img src= {imgUrl} alt=""/>
-                                        <i className="fa fa-play"></i>
-                                    </a>
+                                        <i className="fa fa-play" onClick = {this.playTrainer} data-toggle="modal" data-target="#trainerModal" ></i>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>

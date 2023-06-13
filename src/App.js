@@ -7,6 +7,7 @@ import AdminTemplate from './template/AdminTemplate';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { routeUser, routeAdmin } from './routes/menu-routes';
 import PageNotFound from './containers/PageNotFound';
+import BookingTicketPage from './containers/UserTemplate/BookingTicketPage/BookingTicketPage';
 
 /**
  * Show user route
@@ -43,6 +44,7 @@ function App() {
       <Switch>
         {showUserLayout(routeUser)}
         {showAdminLayout(routeAdmin)}
+        <Route path = "/booking-ticket/:maLichChieu" component ={BookingTicketPage} />
         <Route path = "" component = {PageNotFound}/>
       </Switch>
     </BrowserRouter>

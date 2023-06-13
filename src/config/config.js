@@ -1,0 +1,1 @@
+export const domainAPI = 'http://movie0706.cybersoft.edu.vn';

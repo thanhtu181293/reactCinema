@@ -18,7 +18,7 @@ class Filmsection extends Component {
         return (
            <>
                 <NowShowingFlimList />
-                <FimCommingSoonList /> 
+                <FimCommingSoonList />
                 <Trailerpopup/>
            </>
         )

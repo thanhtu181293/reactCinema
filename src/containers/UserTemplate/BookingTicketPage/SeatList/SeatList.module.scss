@@ -1,0 +1,44 @@
+.seatList {
+    padding-left: 10px;
+    padding-right: 20px;
+    :global .bookingTicketPage__grid {
+        display: grid;
+        grid-template-columns: repeat(13, 45px);
+        row-gap: 10px;
+        width: fit-content;
+        margin: 0 auto;
+        .first-class {
+            margin: 0 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .seatList {
+        :global .bookingTicketPage__grid {
+            display: grid;
+            grid-template-columns: repeat(13, 35px);
+            row-gap: 10px;
+            width: fit-content;
+            margin: 0 auto;
+            .first-class {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .seatList {
+        padding-top: 230px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .seatList {
+        :global .bookingTicketPage__grid {
+            max-width: 100%;
+            overflow-x: scroll;
+        }
+    }
+}

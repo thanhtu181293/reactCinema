@@ -38,7 +38,7 @@ export default function MovieShowTime(props) {
         return cinema.map((item, index) => {
             return (
                 <Tab className="cinemaItem" tabFor={item.maCumRap} key={index}>
-                    <img className="cinema__image" src="https://s3img.vcdn.vn/123phim/2018/09/cgv-aeon-binh-tan-15380175062534.jpg" alt=""/>
+                    <img className="cinema__image" src="./images/cinema.jpg" alt="./images/cinema.jpg"/>
                     <div className="cinema__info">
                         <span className="cinema__name">{item.tenCumRap}</span>
                         <span className="cinema__address">{item.diaChi}</span>

@@ -1,0 +1,122 @@
+.Menu {
+    :global .menu__main{
+        background-color: black;
+        #navbarSupportedContent{
+            ul li.show{
+                a{
+                    color: #ec7532;
+                }
+            }
+            ul li{
+                &:hover{
+                    a{
+                        color: #ec7532;
+                    }
+                }
+                margin: 0 30px;
+                a{
+                    color: white;
+                }
+                .dropdown-menu{
+                    width: auto;
+                    border-radius: 0;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    border: 1px solid black;
+                    a{
+                        padding: 10px;
+                        transition: all .5s;
+                        color: white;
+                        &:hover{
+                            background-color: transparent;
+                            color: orange;
+                        }
+                    }
+                    .menu__Movie{
+                        width: 800px;
+                        .menu__Movie--list .menu__Movie--item .menu__Movie--img{
+                            position: relative;
+                            &:hover{
+                                button{
+                                    opacity: 1;
+                                }
+                            }
+                            button{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                border: 1px solid white;
+                                background-color: transparent;
+                                color: white;
+                                opacity: 0;
+                                transition: all .5s;
+                                overflow: hidden;
+                                span{
+                                    position: relative;
+                                    z-index: 1;
+                                }
+                                &:focus{
+                                    outline: none;
+                                }
+                                &:hover{
+                                    border: none;
+                                    &::after{
+                                        width: 150%;
+                                    }
+                                }
+                                &::after{
+                                    position: absolute;
+                                    content: "";
+                                    height: 100%;
+                                    width: 0;
+                                    top: 0;
+                                    left: -20%;
+                                    transform: skewX(30deg);
+                                    background-color: #ec7532;
+                                    transition: all .5s;
+                                    z-index: 0;
+                                }
+                            }
+                        }
+                        hr{
+                            height: 2px;
+                            background-color: white;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: orange;
+                            transition: all .5s;
+                            &:hover{
+                                color: #ec7532;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and ( max-width: 768px) {
+    .Menu {
+        :global .menu__main{
+            background-color: transparent;
+            #navbarSupportedContent ul li{
+                a{
+                    text-align: right;
+                    color: black;
+                }
+                .dropdown-menu{
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    padding-right: 20px;
+                    font-size: 12px;
+                    a{
+                        color: black;
+                    }
+                }
+            } 
+        }
+    }
+}

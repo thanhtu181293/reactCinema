@@ -1,0 +1,150 @@
+.footer {
+    :global .footer__main{
+        background-color: black;
+        h3{
+            font-size: 20px;
+            padding: 20px 0;
+            margin: 0;
+            color: #ec7532;
+        }
+        p{
+            margin: 0;
+            font-size: 15px;
+            padding-bottom: 10px;
+            a{
+                color: white;
+                text-decoration: none;
+                transition: all .5s;
+                &:hover{
+                    color: orange;
+                }
+            }
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            margin-right: 5px;
+            i{
+                color: white;
+                transition: all .5s;
+                font-size: 25px;
+                &:hover{
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+// .movieFooter{
+//     color: #D5BD61;
+//     background-color: black;
+// }
+
+// .movieFooter h3{
+//     color: #ec7532;
+//     font-size: 1rem;
+// }
+
+// .movieFooter p{
+//     margin: 0;
+//     color: white;
+// }
+
+// .movieFooter a{
+//     text-decoration: none;
+//     color: white;
+//     transition: all .5s;
+// }
+
+// .movieFooter i{
+//     color: #585858;
+//     transition: all .5s;
+//     width: 30px;
+// }
+
+// .movieFooter a:hover{
+//     color: #D5BD61;
+// }
+
+// .movieFooter a:hover i{
+//     color: #D5BD61;
+// }
+
+// .movieFooter hr{
+//     background-color: #282828;
+// }
+
+// @media (max-width: 992px) {
+
+//     .headerMovie .headerMovie__header .headerMovie__logo img{
+//         height: 40px;
+//     }
+
+//     #movieNavbar .navbar-nav .nav-item a{
+//         padding: 5px 10px;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .container {
+//         width: 100%;
+//         max-width: none;
+//     }
+
+//     .headerMovie .headerMovie__header{
+//         margin: 0 -15px 0 -15px;
+//     }
+
+//     .headerMovie .headerMovie__header .headerMovie__menu{
+//         background-color: black;
+//         text-align: center;
+//         margin: 0 -15px 0 -15px;
+//     }
+// }
+
+// @media (max-width: 576px) {
+//     /* SHOWTIME */
+//     .showTime .nav{
+//         display: block;
+//     }
+
+//     .showTime .nav .nav-item{
+//         display: block;
+//     }
+
+//     .showTime .nav-tabs .nav-item .nav-link{
+//         border: none;
+//         position: relative;
+//         padding: 15px 20px;
+//         text-decoration: none;
+//         color: black;
+//         transition: all .5s;
+//     }
+
+//     .showTime .nav-tabs .nav-item .nav-link::after{
+//         content: "";
+//         position: absolute;
+//         width: 4px;
+//         height: 0;
+//         display: block;
+//         left: 0;
+//         bottom: 0;
+//         background: linear-gradient(to top, #fbbd61, #ec7532);
+//         transition: all .5s;
+//     }
+    
+//     .showTime .nav-tabs .nav-item .nav-link.active::after{
+//         height: 100%;
+//         width: 4px;
+//     }
+    
+//     .showTime .nav-tabs .nav-item .nav-link:hover::after{
+//         height: 100%;
+//         width: 4px;
+//     }
+
+//     #myTabContent .tab-pane img{
+//         width: 100%;
+//         margin-bottom: 50px;
+//     }
+// }

@@ -9,6 +9,9 @@
         background-size: 100% 100%;
         background-position: center;
         color: white;
+        .container {
+            padding: 0 20px;
+        }
         h3 {
             font-size: 1.3rem;
             letter-spacing: 1.5px;
@@ -180,6 +183,23 @@
                         display: none;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .commingSoonSlider {
+        :global .commingSoonSlider__area {
+            .commingSoonSlider__area--left {
+                .commingSoonSlider__info {
+                    .commingSoonSlider__info--star {
+                        margin: 5px 0;
+                    }
+                }
+            }
+            .commingSoonSlider__area--right {
+                display: none;
             }
         }
     }

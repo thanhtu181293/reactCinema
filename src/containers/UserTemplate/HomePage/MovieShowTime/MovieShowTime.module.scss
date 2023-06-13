@@ -15,6 +15,10 @@
             }
         }
 
+        .rwt__tabs[data-rwt-vertical="true"] {
+            display: block;
+        }
+
         .columnFirst {
             height: 705px;
             margin-right: 0;
@@ -62,7 +66,7 @@
                         opacity: 0.4;
                     }
                 }
-    
+
                 // ghi đè css của .rwt__tab[aria-selected="true"]:after
                 .rwt__tab {
                     &[aria-selected="true"]::after {
@@ -226,10 +230,9 @@
                             text-align: center;
                         }
                         .movieName {
-                            font-size: 14px;
+                            font-size: 15px;
                             font-weight: bold;
                             display: block;
-                            font-family: 'SF Medium';
                             line-height: 22px;
                             overflow: hidden;
                             text-overflow: ellipsis;
@@ -256,8 +259,7 @@
                             .movieType {
                                 float: left;
                                 width: 100%;
-                                font-family: 'SF Medium';
-                                font-size: 18px;
+                                font-size: 16px;
                                 font-weight: bold;
                                 color: #000;
                                 margin-bottom: 5px;
@@ -266,7 +268,6 @@
                             .movieSession {
                                 .showTimeDetail {
                                     float: left;
-                                    font-family: 'SF Medium';
                                     margin: 0 10px 10px 0;
                                     padding: 5px 25px;
                                     transition: all .2s;
