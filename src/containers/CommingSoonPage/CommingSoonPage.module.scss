@@ -1,0 +1,39 @@
+.commingSoonPage {
+    background-image: url('/./images/bg01.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    :global .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(218, 56, 218, 0.404);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: #555555;
+            padding: 5px 40px;
+            border-radius: 15px;
+            background-color: white;
+            transition: all 0.3s;
+            &:hover {
+                background-color: #555555;
+                color: white;
+            }
+        }
+    }
+}

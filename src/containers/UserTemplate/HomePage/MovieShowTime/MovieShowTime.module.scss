@@ -1,0 +1,380 @@
+.movieShowTimeStyle {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    :global .movieShowTimeContent {
+        margin-top: 20px;
+        width: 100%;
+
+        .no-gutter {
+            margin-right: 0;
+            margin-left: 0;
+            & > [class*='col-'] {
+                padding-right:0;
+                padding-left:0;
+            }
+        }
+
+        .columnFirst {
+            height: 705px;
+            margin-right: 0;
+            overflow-y: hidden;
+            border: 1px solid #ebebec;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            &:hover {
+                overflow-y: auto;
+            }
+
+            .cinemasGroup {
+                margin-right: 0;
+                border: none;
+                .cinemasGroup__item {
+                    background: #ffffff;
+                    display: inline-block;
+                    padding: 20px;
+                    cursor: pointer;
+                    border: none;
+                    position: relative;
+                    transition: all 0.2s;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 70%;
+                        transform: translateX(-50%);
+                        border-bottom: 1px solid #ffffff;
+                        border-color: rgba(238,238,238,0.8);
+                    }
+                    &:hover {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                    &[aria-selected="true"] {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                    img {
+                        width: 50px;
+                        opacity: 0.4;
+                    }
+                }
+    
+                // ghi đè css của .rwt__tab[aria-selected="true"]:after
+                .rwt__tab {
+                    &[aria-selected="true"]::after {
+                        border-right: transparent;
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .listCinemas {
+            width: 100%;
+            height: 705px;
+            overflow-y: hidden;
+            border-top: 1px solid #ebebec;
+            border-bottom: 1px solid #ebebec;
+            margin-right: 0;
+            float: left;
+            &:hover {
+                overflow-y: auto;
+            }
+            .cinemaItem {
+                padding: 15px;
+                padding-left: 20px;
+                float: left;
+                clear: both;
+                width: 100%;
+                position: relative;
+                opacity: 0.5;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &[aria-selected="true"] {
+                    opacity: 1;
+                }
+                &:hover {
+                    opacity: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 90%;
+                    transform: translateX(-50%);
+                    border-bottom: 1px solid #fff;
+                    border-color: rgba(238,238,238,.88);
+                }
+                .cinema__image {
+                    float: left;
+                    width: 50px;
+                }
+                .cinema__info {
+                    span {
+                        text-align: left;
+                        display: block;
+                        line-height: 1.4;
+                    }
+                    padding-left: 60px;
+                    .cinema__name {
+                        color: #000;
+                        font-size: 14px;
+                        .cinema__parent {
+                            color: #e71a0f;
+                            display: inline-block !important;
+                        }
+                    }
+                    .cinema__address {
+                        font-size: 12px;
+                        color: #949494;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .cinema__detail {
+                        a {
+                            color: #fb4226;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            // ghi đè css của .rwt__tab[aria-selected="true"]::after
+            // ghi đè css của .rwt__tab[aria-selected="false"]:hover
+            .rwt__tab {
+                &:focus {
+                    background-color: transparent;
+                }
+                &[aria-selected="true"]::after {
+                    border-right: transparent;
+ 
+                }
+                &[aria-selected="false"]:hover {
+                    background: transparent;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        // column 3
+        .movieShowTimeList {
+            height: 705px;
+            overflow-y: hidden;
+            border: 1px solid #ebebec;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            &:hover {
+                overflow-y: auto;
+            }
+
+            .movieItem {
+                float: left;
+                clear: both;
+                padding-bottom: 17px;
+                padding-top: 20px;
+                padding-right: 15px;
+                padding-left: 20px;
+                width: 100%;
+                position: relative;
+                margin-bottom: 0;
+                border: none;
+                box-shadow: none;
+                -webkit-box-shadow: none;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 90%;
+                    transform: translateX(-50%);
+                    border-bottom: 1px solid #ccc;
+                    border-color: rgba(238,238,238,.88);
+                }
+                .movieInfo {
+                    float: left;
+                    clear: both;
+                    cursor: pointer;
+                    width: 100%;
+                    .movieImage {
+                        width: 50px;
+                        float: left;
+                        height: 50px;
+                        object-fit: cover;
+                    }
+                    .wrapInfo {
+                        width: 100%;
+                        padding-left: 65px;
+                        padding-top: 6px;
+                        .movieAgeType {
+                            background-color: #fb4226;
+                            color: #fff;
+                            border-radius: 4px;
+                            padding: 0 5px;
+                            float: left;
+                            margin-right: 5px;
+                            font-size: 12px;
+                            min-width: 33px;
+                            text-align: center;
+                        }
+                        .movieName {
+                            font-size: 14px;
+                            font-weight: bold;
+                            display: block;
+                            font-family: 'SF Medium';
+                            line-height: 22px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            color: #000;
+                        }
+                        p {
+                            margin: 0;
+                            text-align: left;
+                            line-height: 1.7;
+                            font-size: 12px;
+                            color: #9b9b9b;
+                        }
+                    }
+                    .movieSessions {
+                        float: left;
+                        clear: both;
+                        width: 100%;
+                        transition: height .3s ease-in-out;
+                        .movieListTime {
+                            float: left;
+                            width: 100%;
+                            padding-top: 15px;
+                            display: block;
+                            .movieType {
+                                float: left;
+                                width: 100%;
+                                font-family: 'SF Medium';
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: #000;
+                                margin-bottom: 5px;
+                                text-align: left;
+                            }
+                            .movieSession {
+                                .showTimeDetail {
+                                    float: left;
+                                    font-family: 'SF Medium';
+                                    margin: 0 10px 10px 0;
+                                    padding: 5px 25px;
+                                    transition: all .2s;
+                                    text-decoration: none;
+                                    display: block;
+                                    text-align: center;
+                                    background-color: rgba(246,246,246,.5);
+                                    border-radius: 7px;
+                                    color: #9b9b9b;
+                                    border: 1px solid #e4e4e4;
+                                    cursor: pointer;
+                                    &:hover {
+                                        .movie-time {
+                                            color: #fb4226;
+                                        }
+                                    }
+                                    .movie-time {
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        color: #108f3e;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // css custom scroll
+        .scrollbarY {
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                background-color: #C5C1C1;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .columnFirst {
+                height: auto;
+                display: flex;
+                overflow-x: auto;
+                border: 1px solid #ebebec;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                border-bottom-left-radius: 0;
+                &:hover {
+                    overflow-y: hidden;
+                }
+
+                .cinemasGroup {
+                    display: block;
+                    flex-direction: unset;
+                    .cinemasGroup__item {
+                        padding: 20px;
+                        &::after {
+                            border-bottom: transparent;
+                        }
+                    }
+                }
+            }
+            
+            .listCinemas {
+                border-top-color: transparent;
+                border-left: 1px solid #ebebec;
+            }
+            .movieShowTimeList {
+                border-radius: 0px;
+                border-top-color: transparent;
+                border-left-color: transparent;
+            }
+
+            .scrollbarX {
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                    background-color: #F5F5F5;
+                }
+                &::-webkit-scrollbar {
+                    width: auto;
+                    height: 5px;
+                    background-color: #F5F5F5;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 5px;
+                    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+                    background-color: #C5C1C1;
+                }
+            }
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1999px) {
+            .columnFirst {
+                .cinemasGroup {
+                    .cinemasGroup__item {
+                        padding: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}

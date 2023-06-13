@@ -1,0 +1,45 @@
+.fimCommingSoonList {
+    background-color: #101010;
+    padding: 30px 10px;
+    :global .slick-slider {
+        -webkit-user-select: text;
+        -khtml-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+    }
+    :global .slick-active {
+        z-index: 10;    
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .fimCommingSoonList {
+        :global .container {
+            max-width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .fimCommingSoonList {
+        :global .slick-prev  {
+            left: -15px;
+        }
+        :global .slick-next {
+            right: -15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .fimCommingSoonList {
+        :global .slick-prev  {
+            left: 0px;
+        }
+        :global .slick-next {
+            right: 0px;
+        }
+    }
+}

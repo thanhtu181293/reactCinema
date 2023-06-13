@@ -1,0 +1,22 @@
+.newsSection {
+    :global .newSection__nav {
+        margin-top: 50px;
+        justify-content: center;
+        .nav-item {
+            .nav-link {
+                background-color: transparent;
+                color: black;
+                font-size: 1.3rem;
+                transform: scale(1);
+                transition: all .3s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            .nav-link.active {
+                color: #fb4226;
+                transform: scale(1.2);
+            }
+        }
+    }
+}

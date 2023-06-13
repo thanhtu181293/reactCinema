@@ -1,0 +1,62 @@
+.filmList {
+    :global .filmList-container {
+        padding-top: 25px;
+        margin-bottom: 80px;
+        .filmList__title {
+            text-align: left;
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+            position: relative;
+            margin-bottom: 20px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: -5px;
+                background: #000;
+            }
+        }
+        .slick-arrow {
+            &::before {
+                content: "";
+            }
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 50px;
+            height: 50px;
+        }
+
+        .slick-list {
+            min-height: 400px;
+        }
+
+        .slick-prev {
+            background-image: url('/./images/back-session.png');
+            left: -60px;
+        }
+
+        .slick-next {
+            background-image: url('/./images/next-session.png');
+            right: -60px;
+        }
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .filmList {
+        :global .filmList-container {
+            .slick-prev {
+                background-image: url('/./images/back-session.png');
+                left: -35px;
+            }
+    
+            .slick-next {
+                background-image: url('/./images/next-session.png');
+                right: -35px;
+            }
+        }
+    }
+}
