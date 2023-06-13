@@ -1,25 +1,12 @@
-import HomePage from "../containers/UserTemplate/HomePage/HomePage";
-import Admin from "../containers/AdminTemplate/Admin";
-import MovieDetailPage from "../containers/UserTemplate/MovieDetailPage/MovieDetailPage";
-import CommingSoonPage from '../containers/CommingSoonPage/CommingSoonPage'
-import BookingTicketPage from "../containers/UserTemplate/BookingTicketPage/BookingTicketPage"
+import Home from "../containers/Home"
+import Admin from "../containers/Admin"
 
-const routeUser = [
+const routeHome = [
     {
         exact: true,
         path: '/',
-        component: HomePage
-    },
-    {
-        exact: false,
-        path: '/comming-soon',
-        component: CommingSoonPage
-    },
-    {
-        exact: false,
-        path: '/phim',
-        component: MovieDetailPage
-    },
+        component: Home
+    }
 ]
 
 const routeAdmin = [
@@ -29,4 +16,4 @@ const routeAdmin = [
         component: Admin
     }
 ]
-export {routeUser, routeAdmin}
+export {routeHome, routeAdmin}

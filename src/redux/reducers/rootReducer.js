@@ -1,14 +1,8 @@
 import { combineReducers } from "redux";
-import TrailerPopupReducers from './TrailerPopupReducers';
-import { MovieShowTimeReducer } from './MovieShowTimeReducer';
-import FilmSectionReducer from './FilmSectionReducer'
-import BookingTicketReducer from './BookingTicketReducer'
+import { MovieShowTimeReducer } from './MovieShowTime/MovieShowTimeReducer';
 
 const rootReducer = combineReducers({
-    TrailerPopupReducers,
-    MovieShowTimeReducer,
-    FilmSectionReducer,
-    BookingTicketReducer
+    MovieShowTimeReducer
 });
 
 export default rootReducer;

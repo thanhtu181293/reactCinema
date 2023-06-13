@@ -1,24 +1,11 @@
-// @font-face {font-family: 'SF Text Regular'; src:url('../../fonts/FontsFree-Net-SFProText-Regular.ttf')}
-// @font-face {font-family: 'SF Medium'; src:url('../../fonts/FontsFree-Net-SFProDisplay-Medium.ttf')}
+@font-face {font-family: 'SF Text Regular'; src:url('../../fonts/FontsFree-Net-SFProText-Regular.ttf')}
+@font-face {font-family: 'SF Medium'; src:url('../../fonts/FontsFree-Net-SFProDisplay-Medium.ttf')}
 html, body {
-    font-family: 'Montserrat';
+    font-family: 'SF Text Regular';
     scroll-behavior: smooth;
-    padding-right: 0 !important;
 }
 body.modal-open {
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 0 !important;
-}
-.modal-backdrop {
-    width: 100%;
-    height: 100%;
-}
-
-body.modal-checkout-open {
-    overflow: hidden;
-}
-
-:focus {
-    outline: none;
 }
